@@ -1,2 +1,2 @@
 # IIIT-Guest-House
-This software is used IIIT 
+This software is used IIIT Guest house management
