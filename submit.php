@@ -118,6 +118,3 @@
     -->
   </body>
 </html>
-<div class="col-6">
-        
-    </div>
