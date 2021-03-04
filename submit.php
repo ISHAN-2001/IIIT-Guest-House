@@ -69,7 +69,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 
-          //These are the variables. Submit these variables to the database.
+          // These are the variables from BOOKING FORM.
+          // Insert these variables in respective tables in database.
+          // Use sql command with php to insert rows.
         }
       ?>
 
