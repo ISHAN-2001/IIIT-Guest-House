@@ -62,7 +62,9 @@
           </div>';
               echo " $ID and $Room and $Hyg and $Rating and $sugg";
               
-          //Submit these values to database tables
+          // Here are the variables from FEEDBACK FORM.
+          // Insert these values into database tables.
+          // You can write sql command with php to insert values into tables.
         }
       ?>
 
