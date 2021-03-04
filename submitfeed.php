@@ -33,11 +33,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="feedback.php">Tables</a>
+          <a class="nav-link" href="table.php">Tables</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="feedback.php">Search</a>
+          <a class="nav-link active" href="#">Search</a>
         </li>
 
         <li class="nav-item">
@@ -61,6 +61,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
               echo " $ID and $Room and $Hyg and $Rating and $sugg";
+              
           //Submit these values to database tables
         }
       ?>

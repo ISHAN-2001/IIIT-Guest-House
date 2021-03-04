@@ -33,7 +33,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Tables</a>
+          <a class="nav-link" href="table.php">Tables</a>
         </li>
 
         <li class="nav-item">
@@ -172,7 +172,7 @@
       </div>
     
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <p class="mb-1">&copy; 2021 IIITBBSR pvt.ltd</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>

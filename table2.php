@@ -25,41 +25,29 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="form.php">Book now!</a>
+          <a class="nav-link" href="table.php">Table 1</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="feedback.php">Feedback</a>
+          <a class="nav-link active" href="table2.php">Table 2</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="table.php">Tables</a>
+          <a class="nav-link" href="#">Table 3</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Search</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
-        </li>
-
       </ul>
 
 
         <!--Here the user will give the feedback-->
         <div class="container">
           <div class="py-5 text-center">
-            <h2>About Us</h2>
+            <h2>Table 2</h2>
             <hr class="mb-4">
-            <p class="lead">Ishan Pattnayak ID-B119026</p><br>
-            <p class="lead">Himanshu Nayak ID-B119025</p><br>
-            <p class="lead">Shashwat Dev ID-B119052</p><br>
-            <hr class="mb-4">
+            <p class="lead">Display contents of table 2</p><br>
           </div>
         </div>
         
-
+        
 
 
   <!-- Bootstrap core JavaScript
