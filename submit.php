@@ -69,7 +69,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>';
 
-          //Submit these values to database tables
+          //These are the variables. Submit these variables to the database.
         }
       ?>
 
