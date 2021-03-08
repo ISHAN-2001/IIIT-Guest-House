@@ -54,6 +54,8 @@
         <hr class="mb-4">
       </div>
       <div class="row">
+        <div class="col-md-4 mb-3">
+        </div>
         <div class="col-md-8 order-md-1">      
           <!--Form Begins-->
           <form class="needs-validation" novalidate action="submitfeed.php" method="post">
@@ -111,7 +113,6 @@
                 <label for="exampleFormControlTextarea1">Suggessions</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="sugg"></textarea>
             </div>
-            <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
           </form>
         </div>

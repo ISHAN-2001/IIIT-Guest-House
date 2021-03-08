@@ -34,7 +34,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="table.php">Student_ID</a>
+          <a class="nav-link" href="table.php">Student_ID</a>
         </li>
 
         <li class="nav-item">
@@ -50,7 +50,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="table5.php">Availabilty</a>
+          <a class="nav-link active" href="table5.php">Availabilty</a>
         </li>
 
         <li class="nav-item">
@@ -62,7 +62,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         <!--DISPLAY CONTENTS OF TABLE-->
         <div class="container">
           <div class="py-5 text-center">
-            <h2>STUDENT_ID</h2>
+            <h2>AVAILABILTY</h2>
             <hr class="mb-4">
 
             <div class="row">
@@ -71,7 +71,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
             <div class="col-md-6 mb-3">
 
             <?php
-                $sql = "SELECT * FROM STUDENT_ID";
+                $sql = "SELECT * FROM ROOMS";
                 $result = mysqli_query($conn, $sql);
     
                 if (mysqli_num_rows($result) > 0)
@@ -79,8 +79,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
                   echo'<table class="table table-striped">
                   <thead>
                       <tr>
-                      <th scope="col">Student_ID</th>
-                      <th scope="col">Student_Name</th>
+                      <th scope="col">Student ID</th>
+                      <th scope="col">Room Type</th>
+                      <th scope="col">Room No</th>
+                      <th scope="col">Room Charges</th>
                       </tr>
                   </thead>';
                  // output data of each row
@@ -88,8 +90,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
                   {
                     echo '<tbody>
                     <tr>
-                    <th scope="row">'.$row["Student_ID"].'</th>
-                    <td>'.$row["Student_Name"].'</td>
+                    <th scope="row">'.$row["STUDENT_ID"].'</th>
+                    <td>'.$row["ROOM_TYPE"].'</td>
+                    <td>'.$row["ROOM_NO"].'</td>
+                    <td>'.$row["PRICE"].'</td>
                     </tr>';
                   }
                   echo'</tbody>

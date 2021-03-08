@@ -54,6 +54,8 @@
         <p class="lead">Please fill the form</p>
       </div>
       <div class="row">
+        <div class="col-md-2 mb-3">
+        </div>
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Form</h4>
           
@@ -102,7 +104,7 @@
                 <input type="text" class="form-control" id="Check-In" name="Check_in" required>
               </div>
               <div class="col-md-4 mb-3">
-                <label for="Check-out">Check-out Date</label>
+                <label for="Check-out">Number of Occupants</label>
                 <input type="text" class="form-control" id="Check-Out" name="Check_out" required>
               </div>
               <div class="col-md-4 mb-3">
@@ -115,27 +117,12 @@
             <label for="Room">Room type</label>
             <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Room">
                     <option selected>Select Room type</option>
-                    <option value="AC">AC</option>
-                    <option value="Non-AC">Non-AC</option>
+                    <option value="AC">AC (Rs 1500/-)</option>
+                    <option value="Non-AC">Non-AC (Rs 900/-)</option>
             </select>
             </div>
 
-            <!--
-            <hr class="mb-4">
-            <h5 class="lead">Services :-</h5>
-            <div class="form-check">
-             <input class="form-check-input" type="checkbox" value="Yes" id="A" name="Laundry">
-             <label class="form-check-label" for="A">Laundry</label>
-           </div>
-           <div class="form-check">
-             <input class="form-check-input" type="checkbox" value="Yes" id="B" name="Dining">
-             <label class="form-check-label" for="B">Room dining</label>
-           </div>
-           <div class="form-check">
-             <input class="form-check-input" type="checkbox" value="Yes" id="C" name="Services">
-             <label class="form-check-label" for="C">Room Services</label>
-           </div> 
-           -->
+          
            <hr class="mb-4">
             <h5 class="lead">Services :-</h5>
             <div class="row">
@@ -143,7 +130,7 @@
               <label for="Room">Laundry</label>
                   <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Laundry">
                     <option selected>Laundry Required</option>
-                    <option value="Yes">Yes</option>
+                    <option value="Yes">Yes (Rs 50/-)</option>
                     <option value="No">No</option>
                     </select>
               </div>
@@ -151,7 +138,7 @@
                 <label for="Room">Dining</label>
                   <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Dining">
                     <option selected>Dining Required</option>
-                    <option value="Yes">Yes</option>
+                    <option value="Yes">Yes (Rs 50/-)</option>
                     <option value="No">No</option>
                     </select>
               </div>
@@ -159,14 +146,27 @@
               <label for="Room">Room Services</label>
                   <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Services">
                     <option selected>Room Service</option>
-                    <option value="Yes">Yes</option>
+                    <option value="Yes">Yes (Rs 50/-)</option>
                     <option value="No">No</option>
                     </select>
               </div>
             </div>
            
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            <div class="col-md-4 mb-3">
+              <label for="Room">Payment mode</label>
+                  <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Payment">
+                    <option selected>Select Mode</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Net Banking">Net Banking</option>
+                    </select>
+              </div>
+                 <div class="py-5 text-center">
+                 <hr class="mb-4">
+                     <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                 </div>
           </form>
         </div>
       </div>

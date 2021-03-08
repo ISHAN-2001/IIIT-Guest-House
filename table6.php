@@ -34,7 +34,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="table.php">Student_ID</a>
+          <a class="nav-link" href="table.php">Student_ID</a>
         </li>
 
         <li class="nav-item">
@@ -54,24 +54,23 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="table6.php">Billing</a>
+          <a class="nav-link active" href="table6.php">Billing</a>
         </li>
       </ul>
-
 
         <!--DISPLAY CONTENTS OF TABLE-->
         <div class="container">
           <div class="py-5 text-center">
-            <h2>STUDENT_ID</h2>
+            <h2>Billing</h2>
             <hr class="mb-4">
 
             <div class="row">
-            <div class="col-md-3 mb-3">
+            <div class="col-md-1 mb-3">
             </div>
-            <div class="col-md-6 mb-3">
+            <div class="col-md-10 mb-3">
 
             <?php
-                $sql = "SELECT * FROM STUDENT_ID";
+                $sql = "SELECT * FROM BILLING";
                 $result = mysqli_query($conn, $sql);
     
                 if (mysqli_num_rows($result) > 0)
@@ -81,6 +80,14 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
                       <tr>
                       <th scope="col">Student_ID</th>
                       <th scope="col">Student_Name</th>
+                      <th scope="col">Guest_Name</th>
+                      <th scope="col">Occupants</th>
+                      <th scope="col">Check_IN</th>
+                      <th scope="col">Room_Number</th>
+                      <th scope="col">Room_Charges</th>
+                      <th scope="col">Service_Price</th>
+                      <th scope="col">Total_Price</th>
+                      <th scope="col">Payment</th>
                       </tr>
                   </thead>';
                  // output data of each row
@@ -90,6 +97,14 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
                     <tr>
                     <th scope="row">'.$row["Student_ID"].'</th>
                     <td>'.$row["Student_Name"].'</td>
+                    <td>'.$row["Guest_Name"].'</td>
+                    <td>'.$row["Occupants"].'</td>
+                    <td>'.$row["Check_IN"].'</td>
+                    <td>'.$row["Room_Number"].'</td>
+                    <td>'.$row["Room_Charges"].'</td>
+                    <td>'.$row["Service_Price"].'</td>
+                    <td>'.$row["Total_Price"].'</td>
+                    <td>'.$row["Payment"].'</td>
                     </tr>';
                   }
                   echo'</tbody>
@@ -102,7 +117,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
             ?>
             </div>
-            <div class="col-md-3 mb-3">
+            <div class="col-md-1 mb-3">
             </div>
         </div>
           </div>

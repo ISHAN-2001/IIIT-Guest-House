@@ -1,3 +1,12 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "12345";
+$dbname = "IIIT_BH_GuestHouse";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -59,12 +68,9 @@
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Success!!</strong> Your responce is successfully recorded !
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
-              echo " $ID and $Room and $Hyg and $Rating and $sugg";
+                  </div>';
               
-          // Here are the variables from FEEDBACK FORM.
-          // Insert these values into database tables.
-          // You can write sql command with php to insert values into tables.
+          //Submit these values to database tables
         }
       ?>
 
@@ -90,3 +96,13 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
   </body>
 </html>
+
+<?php
+
+$sql="INSERT INTO FEEDBACK VALUES('$ID','$Room','$Hyg','$Rating','$sugg')";
+if (mysqli_query($conn, $sql)) {
+  echo "";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+?>

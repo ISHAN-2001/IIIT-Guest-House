@@ -49,14 +49,31 @@
 
 
       <!--Jumbotron-->
-    <div class="jumbotron">
-        <h1 class="display-4">IIIT HOTEL MANAGEMENT SYSTEM</h1>
-        <p class="lead">This system is used for management for IIIT guest house </p>
-        <hr class="my-4">
-        <h5 class="display-4">Start booking now !</h5>
-        <br><br>
-        <a class="btn btn-primary btn-lg" href="form.php" role="button">Book now!</a>
+
+      <div class="row">
+          <div class="col-md-2 mb-3">
+          </div>
+          <div class="col-md-8 mb-3">
+            <div class="jumbotron">
+              <div class="py-5 text-center">
+                <h1 class="display-4">IIIT GUEST HOUSE</h1>
+                <p class="lead">This system is used for management for IIIT guest house </p>
+                <hr class="my-4">
+                <h5 class="display-4">Start booking now !</h5><br>
+                <a class="btn btn-primary btn-lg" href="form.php" role="button">Book now!</a>
+              </div>
+            </div>
+          </div>
       </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2021 IIITBBSR pvt.ltd</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

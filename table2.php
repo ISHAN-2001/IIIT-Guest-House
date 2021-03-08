@@ -1,3 +1,12 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "12345";
+$dbname = "IIIT_BH_GuestHouse";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,27 +34,97 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="table.php">Table 1</a>
+          <a class="nav-link" href="table.php">Student_ID</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="table2.php">Table 2</a>
+          <a class="nav-link active" href="table2.php">Guest_Detail</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Table 3</a>
+          <a class="nav-link" href="table3.php">Services</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="table4.php">Feedback</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="table5.php">Availabilty</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="table6.php">Billing</a>
         </li>
       </ul>
 
 
-        <!--Here the user will give the feedback-->
+        <!--Guest Details table-->
         <div class="container">
           <div class="py-5 text-center">
-            <h2>Table 2</h2>
+            <h2>Guest_Detail</h2>
             <hr class="mb-4">
-            <p class="lead">Display contents of table 2</p><br>
+
+            <div class="row">
+            <div class="col-md-2 mb-3">
+            </div>
+            <div class="col-md-8 mb-3">
+
+            <?php
+                $sql = "SELECT * FROM Guest_Detail";
+                $result = mysqli_query($conn, $sql);
+    
+                if (mysqli_num_rows($result) > 0)
+                {
+                  echo'<table class="table table-striped">
+                  <thead>
+                      <tr>
+                      <th scope="col">Student_ID</th>
+                      <th scope="col">Guest_Name</th>
+                      <th scope="col">Check_IN</th>
+                      <th scope="col">Address</th>
+                      <th scope="col">Occupants</th>
+                      <th scope="col">Number of days</th>
+                      </tr>
+                  </thead>';
+                 // output data of each row
+                  while($row = mysqli_fetch_assoc($result)) 
+                  {
+                    echo '<tbody>
+                    <tr>
+                    <th scope="row">'.$row["Student_ID"].'</th>
+                    <td>'.$row["Guest_Name"].'</td>
+                    <td>'.$row["Check_IN"].'</td>
+                    <td>'.$row["Address"].'</td>
+                    <td>'.$row["Occupants"].'</td>
+                    <td>'.$row["Days"].'</td>
+                    </tr>';
+                  }
+                  echo'</tbody>
+                  </table>';
+                }
+                else 
+                {
+                  echo "0 results";
+                }
+
+            ?>
+            </div>
+            <div class="col-md-2 mb-3">
+            </div>
+        </div>
           </div>
         </div>
+        <br><br><br><br><br><br>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2021 IIITBBSR pvt.ltd</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
         
         
 

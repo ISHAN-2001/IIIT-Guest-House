@@ -1,3 +1,13 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "12345";
+$dbname = "IIIT_BH_GuestHouse";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,49 +67,73 @@
             $G_name = $_POST['G_name'];
             $Address = $_POST['Address'];
             $Check_in = $_POST['Check_in'];
-            $Check_out = $_POST['Check_out'];
+            $Occupants = $_POST['Check_out'];
             $days = $_POST['days']; 
             $Room = $_POST['Room'];
             $Laundry = $_POST['Laundry'];
             $Dining = $_POST['Dining'];
             $Services = $_POST['Services'];
+            $Payment = $_POST['Payment'];
 
             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Success!!</strong> Your responce is successfully recorded !
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
+                  </div>';
 
-          // These are the variables from BOOKING FORM.
-          // Insert these variables in respective tables in database.
-          // Use sql command with php to insert rows.
+          //Submit these values to database tables
+          $Room_Charge=$Service_Charge=$Total_Charge=0;
+          if($Room=="AC")
+          {
+            $sql="UPDATE availabilty SET AC_Room=AC_Room+1";
+            $Room_Charge=1500*$days;
+          }
+          else
+          {
+            $sql="UPDATE availabilty SET NONAC_Room=NONAC_Room+1";
+            $Room_Charge=900*$days;
+          }
+          if (mysqli_query($conn, $sql))
+           {
+            echo "";
+          }
+           else 
+           {
+            echo "Error updating record: " . mysqli_error($conn);
+           }
+          $sql="SELECT * FROM AVAILABILTY";
+          $result = mysqli_query($conn, $sql);
+          $row = mysqli_fetch_assoc($result);
+          $Room_No=$row["AC_Room"]+$row["NONAC_Room"];
+
+          if($Laundry=="Yes")
+          {
+            $Service_Charge=$Service_Charge+50;
+          }
+          if($Dining=="Yes")
+          {
+            $Service_Charge=$Service_Charge+50;
+          }
+          if($Services=="Yes")
+          {
+            $Service_Charge=$Service_Charge+50;
+          }
+          $Total_Charge=$Room_Charge+$Service_Charge;
         }
       ?>
 
     <!--Submit verify submit to database-->
     <div class="container">
       <div class="py-5 text-center">
-        <h2>Form Submitted</h2>
+        <h2>Billing Deails</h2>
         <p>Your Details are recorded! Have a nice stay!!</p>
-        <div class="container">
-            <div class="row">
-              <div class="col">
-              </div>
-              <div class="col-3">
-                <ul class="list-group">
-                    <li class="list-group-item">Student Name:   <?php echo"$S_name"?></li>
-                    <li class="list-group-item">Student ID   : <?php echo"$ID"?>   </li>   
-                    <li class="list-group-item">Guest Name   : <?php echo"$G_name"?>   </li>   
-                    <li class="list-group-item">Address      : <?php echo"$Address"?></li>   
-                    <li class="list-group-item">Room Type    : <?php echo"$Room"?></li>   
-                    <li class="list-group-item">Laundry Required: <?php echo"$Laundry"?></li>   
-                    <li class="list-group-item">Dining Required: <?php echo"$Dining"?></li>   
-                    <li class="list-group-item">Room Service :   <?php echo"$Services"?></li>
-                    <li class="list-group-item">Number of days :   <?php echo"$days"?></li>     
-                </ul>
-              </div>
-              <div class="col">
-              </div>
-         </div>
+        <hr class="mb-4">
+         <p class="lead">Guest Name : <?php echo"$G_name"?></p>
+         <p class="lead">Room Number : <?php echo"$Room_No"?></p>
+         <p class="lead">Number of days : <?php echo"$days"?></p>
+         <p class="lead">Room type : <?php echo"$Room"?></p>
+         <p class="lead">Room charges: <?php echo"$Room_Charge"?></p>
+         <p class="lead">Service Charges: <?php echo"$Service_Charge"?></p>
+         <p class="lead">Total Charges: <?php echo"$Total_Charge"?></p>
         <br><br>
         <a class="btn btn-primary btn-lg" href="feedback.php" role="button">Give Feedback</a>
       </div>
@@ -120,3 +154,44 @@
     -->
   </body>
 </html>
+
+<!--Inserting into database-->
+<?php
+
+    $sql="INSERT INTO STUDENT_ID VALUES('$ID','$S_name')";
+    if (mysqli_query($conn, $sql)) {
+      echo "";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $sql="INSERT INTO GUEST_DETAIL VALUES('$ID','$G_name','$Check_in','$Address','$Occupants','$days')";
+    if (mysqli_query($conn, $sql)) {
+      echo "";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $sql="INSERT INTO SERVICES VALUES('$ID','$Laundry','$Services','$Dining')";
+    if (mysqli_query($conn, $sql)) {
+      echo "";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    $sql="INSERT INTO ROOMS VALUES('$ID','$Room','$Room_No','$Room_Charge')";
+    if (mysqli_query($conn, $sql)) {
+      echo "";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    
+    $sql="INSERT INTO BILLING VALUES('$ID','$S_name','$G_name','$Occupants','$Check_in',
+           '$Room_No','$Room_Charge','$Service_Charge','$Total_Charge','$Payment')";
+    if (mysqli_query($conn, $sql)) {
+      echo "";
+    } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+?>
