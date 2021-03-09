@@ -13,8 +13,10 @@
   <style>
     body
     {
-        margin:5px;
-        padding:5px;
+        background-image: url('img/backg4.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
     }
  </style>
   <body>
@@ -37,7 +39,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Search</a>
+          <a class="nav-link" href="search.php">Search</a>
         </li>
 
         <li class="nav-item">
@@ -45,16 +47,11 @@
         </li>
 
       </ul>
-      <br><br><br>
+      <br><br>
 
 
       <!--Jumbotron-->
-
-      <div class="row">
-          <div class="col-md-2 mb-3">
-          </div>
-          <div class="col-md-8 mb-3">
-            <div class="jumbotron">
+      <a href="https://www.iiit-bh.ac.in/" target="_blank"><img class="d-block mx-auto mb-4" src="img/logo.png" width="100" height="100"></a>
               <div class="py-5 text-center">
                 <h1 class="display-4">IIIT GUEST HOUSE</h1>
                 <p class="lead">This system is used for management for IIIT guest house </p>
@@ -62,9 +59,6 @@
                 <h5 class="display-4">Start booking now !</h5><br>
                 <a class="btn btn-primary btn-lg" href="form.php" role="button">Book now!</a>
               </div>
-            </div>
-          </div>
-      </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2021 IIITBBSR pvt.ltd</p>

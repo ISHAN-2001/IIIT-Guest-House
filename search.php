@@ -39,11 +39,11 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="search.php">Search</a>
+          <a class="nav-link active" href="search.php">Search</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="aboutus.php">About Us</a>
+          <a class="nav-link" href="aboutus.php">About Us</a>
         </li>
 
       </ul>
@@ -52,13 +52,24 @@
         <!--Here the user will give the feedback-->
         <div class="container">
           <div class="py-5 text-center">
-          <img src="img/profile.png" width="100" height="100" alt="---"><br>
-            <h2><u>About Us</u></h2>
+          <img src="img/search.png" width="100" height="100" alt="---"><br>
+            <h2><u>Search</u></h2>
+            <p class="lead">Enter Student ID to get all details</p><br>
             <hr class="mb-4">
-            <p class="lead">Ishan Pattnayak ID-B119026</p><br>
-            <p class="lead">Himanshu Nayak ID-B119025</p><br>
-            <p class="lead">Shashwat Dev ID-B119052</p><br>
-            <hr class="mb-4">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <form class="needs-validation" novalidate action="#" method="post">
+                    <div class="col-md-8 mb-3">
+                        <label for="lastName">Student ID</label>
+                        <input type="text" class="form-control" id="lastName" name="ID" placeholder="Type your ID here" required>
+                        <hr class="mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                    </div> 
+                    </form>
+                </div>
+            </div>
           </div>
         </div>
         

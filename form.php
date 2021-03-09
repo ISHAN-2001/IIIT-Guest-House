@@ -12,8 +12,10 @@
   <style>
     body
     {
-        margin:5px;
-        padding:5px;
+      background-image: url('img/backg4.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
     }
  </style>
   <body class="bg-light">
@@ -37,7 +39,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Search</a>
+          <a class="nav-link" href="search.php">Search</a>
         </li>
 
         <li class="nav-item">
@@ -50,7 +52,8 @@
       <!--Form-->
     <div class="container">
       <div class="py-5 text-center">
-        <h2>Check-in form</h2>
+        <img src="img/form.png" width="50" height="50" alt="----">
+        <h2><u>Check-in form</u></h2>
         <p class="lead">Please fill the form</p>
       </div>
       <div class="row">

@@ -23,8 +23,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
   <style>
     body
     {
-        margin:5px;
-        padding:5px;
+      background-image: url('img/back4.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
     }
  </style>
   <body class="bg-light">
@@ -48,7 +50,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Search</a>
+          <a class="nav-link" href="search.php">Search</a>
         </li>
 
         <li class="nav-item">

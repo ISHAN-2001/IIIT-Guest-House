@@ -21,8 +21,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
   <style>
     body
     {
-        margin:5px;
-        padding:5px;
+      background-image: url('img/back.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
     }
  </style>
   <body class="bg-light">
@@ -61,7 +63,8 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
         <!--DISPLAY CONTENTS OF TABLE-->
         <div class="container">
           <div class="py-5 text-center">
-            <h2>Billing</h2>
+          <img src="img/table.png" width="50" height="50" alt="---"><br>
+            <h2><u>Billing</u></h2>
             <hr class="mb-4">
 
             <div class="row">

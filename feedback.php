@@ -12,8 +12,10 @@
   <style>
     body
     {
-        margin:5px;
-        padding:5px;
+      background-image: url('img/back4.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
     }
  </style>
   <body class="bg-light">
@@ -37,7 +39,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Search</a>
+          <a class="nav-link" href="search.php">Search</a>
         </li>
 
         <li class="nav-item">
@@ -49,25 +51,26 @@
         <!--Here the user will give the feedback-->
     <div class="container">
       <div class="py-5 text-center">
-        <h2>Feedback Form</h2>
+      <img src="img/form.png" width="50" height="50" alt="----">
+        <h2><u>Feedback Form</u></h2>
         <p class="lead">Please give your valuable feedback</p>
         <hr class="mb-4">
       </div>
       <div class="row">
         <div class="col-md-4 mb-3">
         </div>
-        <div class="col-md-8 order-md-1">      
+        <div class="col-md-6 order-md-1">      
           <!--Form Begins-->
           <form class="needs-validation" novalidate action="submitfeed.php" method="post">
           
           <!--Student ID-->
-          <div class="col-md-5 mb-3">
+          <div class="col-md-8 mb-3">
               <label for="Guest Name">Student ID</label>
               <input type="text" class="form-control" id="Guest Name" name="ID" placeholder="B119026" required>
           </div>
 
           <!--Room -->
-          <div class="col-md-3 mb-3">
+          <div class="col-md-8 mb-3">
             <label for="Room">Room Condition</label>
             <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Room">
                     <option selected>Select</option>
@@ -82,7 +85,7 @@
 
             <!--Hygiene-->
             <!--Room -->
-          <div class="col-md-3 mb-3">
+          <div class="col-md-8 mb-3">
             <label for="Room">Hygiene</label>
             <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Hyg">
                     <option selected>Select</option>
@@ -96,7 +99,7 @@
             </div> 
 
             <!--Overall-->
-            <div class="col-md-3 mb-3">
+            <div class="col-md-8 mb-3">
             <label for="Room">Overall Rating</label>
             <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Rating">
                     <option selected>Select</option>
@@ -109,11 +112,14 @@
             </select>
             </div>
 
-            <div class="form-group col-md-5 mb-3">
+            <div class="form-group col-md-8 mb-3">
                 <label for="exampleFormControlTextarea1">Suggessions</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="sugg"></textarea>
+                <hr class="mb-4">
+                <div class="py-5 text-center">
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                </div>
             </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
           </form>
         </div>
       </div>
@@ -121,7 +127,7 @@
 
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2017-2018 Company Name</p>
+        <p class="mb-1">&copy;2021 IIITBH pvt.ltd</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
