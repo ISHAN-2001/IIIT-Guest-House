@@ -6,11 +6,13 @@ This project is completely developed in PHP and SQL.
 Acess this Project:
 1.Clone or Download the Project.
 
-2.Install xampp/Apache since PHP requires live server to work on browser.
+2.Install xampp app since PHP requires live server to work on browser.
 
-3.Copy the folder and paste into xampp/htdocs/FolderName.
+3.Copy the all files in this repository and paste into xampp/htdocs/FolderName.
 
-4.Start the local server using xampp/Apache.
+4.Start xampp app then start Apache server.
+
+5.Enter localhost/FolderName to start the project.
 
 
 ------------------------------------------THIS IS NOT FINAL README FILE----------------------------------------------
