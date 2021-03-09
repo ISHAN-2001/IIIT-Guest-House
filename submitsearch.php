@@ -1,3 +1,12 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "12345";
+$dbname = "IIIT_BH_GuestHouse";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,28 +57,51 @@
 
       </ul>
 
+        <!--php code for search-->
+        <?php
+            if($_SERVER['REQUEST_METHOD'])
+            {
+                $ID = $_POST['ID'];
+            }
+            $sql = "SELECT * FROM BILLING WHERE STUDENT_ID='$ID'";
+            $result = mysqli_query($conn, $sql);
+            $sql1= "SELECT * FROM ROOMS WHERE STUDENT_ID= '$ID'";
+            $result1=  mysqli_query($conn, $sql1);
+        ?>
 
         <!--Here the user will give the feedback-->
         <div class="container">
           <div class="py-5 text-center">
           <img src="img/search.png" width="100" height="100" alt="---"><br>
-            <h2><u>Search</u></h2>
-            <p class="lead">Enter Student ID to get all details</p><br>
+            <h2><u>Search Results</u></h2>
             <hr class="mb-4">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                </div>
-                <div class="col-md-6 mb-3">
-                    <form class="needs-validation" novalidate action="submitsearch.php" method="post">
-                    <div class="col-md-8 mb-3">
-                        <label for="lastName">Student ID</label>
-                        <input type="text" class="form-control" id="lastName" name="ID" placeholder="Type your ID here" required>
-                        <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
-                    </div> 
-                    </form>
-                </div>
-            </div>
+            <?php
+            
+            if (mysqli_num_rows($result) > 0)
+            {
+                $row = mysqli_fetch_assoc($result);
+                $row1= mysqli_fetch_assoc($result1);
+                echo '<p class="lead"><u>Student Details</u><p>
+                <p class="lead">Student ID:'.$row["Student_ID"].'</p>
+                <p class="lead">Student Name:'.$row["Student_Name"].'</p>
+                <p class="lead"><u>Guest Details</u><p>
+                <p class="lead">Guest Name: '.$row["Guest_Name"].'</p>
+                <p class="lead">No.of Occupants: '. $row["Occupants"].'</p>
+                <p class="lead">Check In date:'. $row["Check_IN"].' </p>
+                <p class="lead"><u>Room Details</u><p>
+                <p class="lead">Room Number:'. $row1["ROOM_NO"].' </p>
+                <p class="lead">Room Number:'. $row1["ROOM_TYPE"].' </p>
+                <p class="lead"><u>Payment Details</u><p>
+                <p class="lead">Room charges:'. $row["Room_Charges"] .'</p>
+                <p class="lead">Service Price:'.$row["Service_Price"].' </p>
+                <p class="lead">Total Price:'. $row["Total_Price"].' </p>';  
+            }
+            else 
+            {
+               echo' <p class="lead">Not Found anything !</p>
+                <p class="lead">Either you entered wrong ID or you have not booked in this guest house. </p> ';
+            }
+            ?>
           </div>
         </div>
         
