@@ -21,7 +21,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
   <style>
     body
     {
-      background-image: url('img/back4.jpg');
+      background-image: url('img/back7.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;

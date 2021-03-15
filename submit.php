@@ -137,7 +137,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
          <p class="lead">Service Charges: <?php echo"$Service_Charge"?></p>
          <p class="lead">Total Charges: <?php echo"$Total_Charge"?></p>
         <br><br>
-        <a class="btn btn-primary btn-lg" href="feedback.php" role="button">Give Feedback</a>
+        <a class="btn btn-primary btn-lg" href="feedback.php" role="button">Give Feedback &raquo;</a>
       </div>
     </div>  
         <br>

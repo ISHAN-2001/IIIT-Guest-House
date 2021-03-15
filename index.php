@@ -21,7 +21,7 @@
  </style>
   <body>
     <!--navigation bar-->
-      <ul class="nav nav-tabs navbar navbar-expand-lg navbar-light bg-light">
+      <ul class="nav nav-tabs navbar navbar-expand-lg navbar-light bg-light ">
         <li class="nav-item">
           <a class="nav-link active" href="index.php">Home</a>
         </li>
@@ -57,7 +57,7 @@
                 <p class="lead">This system is used for management for IIIT guest house </p>
                 <hr class="my-4">
                 <h5 class="display-4">Start booking now !</h5><br>
-                <a class="btn btn-primary btn-lg" href="form.php" role="button">Book now!</a>
+                <a class="btn btn-primary btn-lg" href="form.php" role="button">Book now! &raquo;</a>
               </div>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">

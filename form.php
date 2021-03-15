@@ -164,11 +164,12 @@
                     <option value="Credit Card">Credit Card</option>
                     <option value="Debit Card">Debit Card</option>
                     <option value="Net Banking">Net Banking</option>
+                    <option value="UPI">UPI</option>
                     </select>
               </div>
                  <div class="py-5 text-center">
                  <hr class="mb-4">
-                     <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                     <button class="btn btn-primary btn-lg btn-block" type="submit">Submit &raquo;</button>
                  </div>
           </form>
         </div>

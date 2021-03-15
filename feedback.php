@@ -12,7 +12,7 @@
   <style>
     body
     {
-      background-image: url('img/back4.jpg');
+      background-image: url('img/back7.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;
@@ -117,7 +117,7 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="sugg"></textarea>
                 <hr class="mb-4">
                 <div class="py-5 text-center">
-                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit &raquo;</button>
                 </div>
             </div>
           </form>

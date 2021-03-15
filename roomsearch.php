@@ -12,7 +12,7 @@
   <style>
     body
     {
-      background-image: url('img/back5.jpg');
+      background-image: url('img/back10.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;
@@ -23,20 +23,19 @@
     <!--navigation bar-->
     <ul class="nav nav-tabs navbar navbar-expand-lg navbar-light bg-light">
 
-    <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link disabled" href="#">Search &raquo;</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="search.php">Student</a>
+          <a class="nav-link" href="search.php">Student</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="roomsearch.php">Rooms</a>
+          <a class="nav-link active" href="roomsearch.php">Rooms</a>
         </li>
 
       </ul>
@@ -45,19 +44,23 @@
         <!--Here the user will give the feedback-->
         <div class="container">
           <div class="py-5 text-center">
-          <img src="img/search.png" width="100" height="100" alt="---"><br>
-            <h2><u>Student Search</u></h2>
-            <p class="lead">Enter Student ID to get all details</p><br>
+          <img src="img/housesearch.png" width="100" height="100" alt="---"><br>
+            <h2><u>Room Search</u></h2>
+            <p class="lead">Select type of room to get deatils</p><br>
             <hr class="mb-4">
             <div class="row">
                 <div class="col-md-4 mb-3">
                 </div>
                 <div class="col-md-6 mb-3">
-                    <form class="needs-validation" novalidate action="submitsearch.php" method="post">
+                    <form class="needs-validation" novalidate action="roomsubmit.php" method="post">
                     <div class="col-md-8 mb-3">
-                        <label for="lastName">Student ID</label>
-                        <input type="text" class="form-control" id="lastName" name="ID" placeholder="Type your ID here" required>
-                        <hr class="mb-4">
+                        <label for="Room">Room Type</label>
+                        <select class="form-select mb-2" aria-label=".form-select-lg example" id="Room" name="Room">
+                            <option selected>Select</option>
+                            <option value="AC">AC Room</option>
+                            <option value="Non-AC">Non-AC Room</option>
+                            <option value="All">All Rooms</option>
+                        </select>
                             <button class="btn btn-primary btn-lg btn-block" type="submit">Submit &raquo;</button>
                     </div> 
                     </form>

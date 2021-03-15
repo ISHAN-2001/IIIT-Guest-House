@@ -21,7 +21,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
   <style>
     body
     {
-      background-image: url('img/back.jpg');
+      background-image: url('img/back11.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;  
         background-size: cover;
@@ -31,6 +31,10 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     <!--navigation bar-->
     <ul class="nav nav-tabs navbar navbar-expand-lg navbar-light bg-light">
+
+    <li class="nav-item">
+          <a class="nav-link disabled" href="#">Tables &raquo;</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="index.php">Home</a>
         </li>
