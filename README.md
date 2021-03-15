@@ -14,5 +14,10 @@ Acess this Project:
 
 5.Enter localhost/FolderName to start the project.
 
+or
 
-------------------------------------------THIS IS NOT FINAL README FILE----------------------------------------------
+You can use any other method to view php files in localhost.
+
+Read the full documentation here.
+[Documentation.pdf](https://github.com/ISHAN-2001/IIIT-Guest-House/files/6142656/Documentation.pdf)
+
